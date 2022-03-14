@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beavproc.Abstractions", "Source\Beavproc.Abstractions\Beavproc.Abstractions.csproj", "{EC7D4C26-AECB-4629-A334-324168C55E46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beavproc.Mos6502", "Source\Beavproc.Mos6502\Beavproc.Mos6502.csproj", "{018BDE64-89D1-4171-AC00-2B1502B04E70}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC7D4C26-AECB-4629-A334-324168C55E46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC7D4C26-AECB-4629-A334-324168C55E46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC7D4C26-AECB-4629-A334-324168C55E46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC7D4C26-AECB-4629-A334-324168C55E46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{018BDE64-89D1-4171-AC00-2B1502B04E70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{018BDE64-89D1-4171-AC00-2B1502B04E70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{018BDE64-89D1-4171-AC00-2B1502B04E70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{018BDE64-89D1-4171-AC00-2B1502B04E70}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

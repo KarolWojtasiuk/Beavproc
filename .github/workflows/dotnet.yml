@@ -1,0 +1,55 @@
+name: .NET
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: 'Publish'
+        required: false
+        type: boolean
+
+jobs:
+  build:
+    
+    strategy:
+      matrix:
+        os: [ ubuntu-latest, macos-latest, windows-latest ]
+    
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 6.0.x
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --no-restore
+
+      - name: Test
+        run: dotnet test --no-build
+
+      - name: Publish Beavproc.Abstractions
+        uses: rohith/publish-nuget@v2
+        if: ${{ github.event.inputs.publish && runner.os == 'Linux' }}
+        continue-on-error: true
+        with:
+          PROJECT_FILE_PATH: Source/Beavproc.Abstractions/Beavproc.Abstractions.csproj
+          NUGET_KEY: ${{ secrets.NUGET_KEY }}
+
+      - name: Publish
+        uses: rohith/publish-nuget@v2
+        if: ${{ github.event.inputs.publish && runner.os == 'Linux' }}
+        continue-on-error: true
+        with:
+          PROJECT_FILE_PATH: Source/Beavproc.Mos6502/Beavproc.Mos6502.csproj
+          NUGET_KEY: ${{ secrets.NUGET_KEY }}

@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+        <Nullable>enable</Nullable>
+
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageId>Beavproc.Abstractions</PackageId>
+        <Version>0.0.0</Version>
+        <Authors>KarolWojtasiuk</Authors>
+        <PackageProjectUrl>https://github.com/KarolWojtasiuk/Beavproc</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/KarolWojtasiuk/Beavproc</RepositoryUrl>
+        <PackageTags>emulator;processor;cpu;abstractions</PackageTags>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    </PropertyGroup>
+
+</Project>
