@@ -6,6 +6,9 @@
         <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
         <Nullable>enable</Nullable>
 
+        <!-- Documentation - WiP -->
+        <NoWarn>CS1591</NoWarn>
+
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageId>Beavproc.Mos6502</PackageId>
         <Version>0.0.0</Version>
@@ -18,7 +21,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Beavproc.Abstractions\Beavproc.Abstractions.csproj"/>
+        <ProjectReference Include="..\Beavproc.Abstractions\Beavproc.Abstractions.csproj" />
     </ItemGroup>
 
 </Project>
