@@ -46,7 +46,7 @@ jobs:
           PROJECT_FILE_PATH: Source/Beavproc.Abstractions/Beavproc.Abstractions.csproj
           NUGET_KEY: ${{ secrets.NUGET_KEY }}
 
-      - name: Publish
+      - name: Publish Beavproc.Mos6502
         uses: rohith/publish-nuget@v2
         if: ${{ github.event.inputs.publish && runner.os == 'Linux' }}
         continue-on-error: true
