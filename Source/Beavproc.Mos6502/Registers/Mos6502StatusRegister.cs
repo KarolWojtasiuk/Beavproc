@@ -5,12 +5,12 @@ namespace Beavproc.Mos6502.Registers;
 
 public class Mos6502StatusRegister : IStatusRegister
 {
-    private readonly BitArray _flags = new(8);
+    public BitArray Data { get; } = new(8);
 
-    public ProcessorStatusFlagValue this[ProcessorStatusFlagType flag]
+    public bool this[ProcessorStatusFlagType flag]
     {
-        get => _flags.Get(ConvertFlagToBitIndex(flag));
-        set => _flags.Set(ConvertFlagToBitIndex(flag), value);
+        get => Data.Get(ConvertFlagToBitIndex(flag));
+        set => Data.Set(ConvertFlagToBitIndex(flag), value);
     }
 
     private static int ConvertFlagToBitIndex(ProcessorStatusFlagType flag)

@@ -1,6 +1,6 @@
 namespace Beavproc.Abstractions.Registers;
 
-public interface IStatusRegister
+public interface IStatusRegister : IRegister
 {
-    public ProcessorStatusFlagValue this[ProcessorStatusFlagType flag] { get; set; }
+    public bool this[ProcessorStatusFlagType flag] { get; set; }
 }
